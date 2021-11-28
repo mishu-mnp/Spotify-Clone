@@ -9,8 +9,8 @@ import { getTokenFromUrl } from './spotify';
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [token, setToken] = useState(null);
-  const [{ user }, dispatch] = useDataLayerValue();
+  // const [token, setToken] = useState(null);
+  const [{ user, token }, dispatch] = useDataLayerValue();
 
   // Run Code based on a given condition
   useEffect(() => {
@@ -42,16 +42,16 @@ function App() {
 
     }
 
-    console.log("I HAVE A TOKEN >>> ", _token)
+    // console.log("I HAVE A TOKEN >>> ", _token)
   }, []);
 
-  console.log("SHOW ME USER", user);
-  console.log("TOKEN >>> ", token);
+  // console.log("SHOW ME USER", user);
+  // console.log("TOKEN >>> ", token);
 
   return (
     <div className="App">
       {
-        token ? (<Player />) : (<Login />)
+        token ? (<Player spotify={spotify} />) : (<Login />)
       }
 
     </div>

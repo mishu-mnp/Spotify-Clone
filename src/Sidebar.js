@@ -28,7 +28,7 @@ function Sidebar() {
             ))}
 
 
-            <SidebarOption title='Rock' />
+            {/* <SidebarOption title='Rock' /> */}
             {/* <SidebarOption title='Soft' /> */}
             {/* <SidebarOption title='Party' />  */}
         </div>

@@ -11,7 +11,7 @@ function Header({ spotify }) {
         <div className='header'>
             <div className="header__left">
                 <SearchIcon />
-                <input type="text" placeholder='Search for artists, songs' />
+                <input type="text" placeholder='Search for artists, songs or podcasts' />
             </div>
 
             <div className="header__right">
